@@ -1,3 +1,3 @@
 # iot-platform
 # Block Diagram
-iot-platform/blockDiagram.png
+https://github.com/longntv/iot-platform/blob/master/blockDiagram.png
