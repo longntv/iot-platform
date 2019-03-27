@@ -1,8 +1,9 @@
 # MQTT Client using mosquitto-client in C++
 # Setup mosquitto in Raspberry Pi
 Step 1 — Installing Mosquitto using apt install:
-'sudo apt update'
-'sudo apt install mosquitto mosquitto-clients'
+
+`sudo apt update`
+`sudo apt install mosquitto mosquitto-clients`
 
 Step 2 — Configuring MQTT Passwords
 
