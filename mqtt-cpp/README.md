@@ -1,12 +1,12 @@
 # MQTT Client using mosquitto-client in C++
 # Setup mosquitto in Raspberry Pi
-..* Step 1 — Installing Mosquitto using apt install:
+- Step 1 — Installing Mosquitto using apt install:
 
 `sudo apt update`
 
 `sudo apt install mosquitto mosquitto-clients`
 
-..*Step 2 — Configuring MQTT Passwords
+- Step 2 — Configuring MQTT Passwords
 
 `sudo mosquitto_passwd -c /etc/mosquitto/passwd test`
 
@@ -18,12 +18,11 @@ sudo nano /etc/mosquitto/conf.d/default.conf
 This should open an empty file. Paste in the following:
 
 `allow_anonymous false`
-
 `password_file /etc/mosquitto/passwd`
 
 Be sure to leave a trailing newline at the end of the file.
 
-..*Step 3 - Testing
+- Step 3 - Testing
 
 Subscribe to the 'test' topic, using the username and password this time:
 
