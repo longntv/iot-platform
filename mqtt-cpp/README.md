@@ -44,9 +44,13 @@ git clone https://github.com/eclipse/mosquitto.git`
 `sudo apt install cmake`
 
 `cd mosquitto
+
 mkdir build
+
 cd build
+
 cmake -DWITH_STATIC_LIBRARIES=ON ../
+
 make'
 
 Besure that 2 shared libraries are made:
@@ -56,7 +60,10 @@ libmosquittopp.so.1
 - Step 3 Configuring mosquitto shared library which loading when run program
 
 `sudo cp /lib/libmosquitto.so.1 /usr/local/lib/
+
 sudo cp /lib/cpp/libmosquittopp.so.1 /usr/local/lib/`
 
-Then run `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib`
+Then run:
+
+`export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib`
 
