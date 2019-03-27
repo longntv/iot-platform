@@ -3,7 +3,6 @@
 - Step 1 — Installing Mosquitto using apt install:
 
 `sudo apt update`
-
 `sudo apt install mosquitto mosquitto-clients`
 
 - Step 2 — Configuring MQTT Passwords
@@ -32,4 +31,32 @@ Now publish a message with your other terminal, again using the username and pas
 
 `mosquitto_pub -h localhost -t "test" -m "hello world" -u "test" -P "password"`
 
+
+# Build mosquitto source in Raspberry Pi
+- Step 1 Download mosquitto project at [here](https://github.com/eclipse/mosquitto)
+
+`mkdir MQTT
+cd MQTT
+git clone https://github.com/eclipse/mosquitto.git`
+
+- Step 2 Installing mosquitto using cmake ( Install cmake tool if required)
+
+`sudo apt install cmake`
+
+`cd mosquitto
+mkdir build
+cd build
+cmake -DWITH_STATIC_LIBRARIES=ON ../
+make'
+
+Besure that 2 shared libraries are made:
+libmosquitto.so.1
+libmosquittopp.so.1
+
+- Step 3 Configuring mosquitto shared library which loading when run program
+
+`sudo cp /lib/libmosquitto.so.1 /usr/local/lib/
+sudo cp /lib/cpp/libmosquittopp.so.1 /usr/local/lib/`
+
+Then run `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib`
 
