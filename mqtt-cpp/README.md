@@ -36,22 +36,24 @@ Now publish a message with your other terminal, again using the username and pas
 - Step 1 Download mosquitto project at [here](https://github.com/eclipse/mosquitto)
 
 `mkdir MQTT
-cd MQTT
-git clone https://github.com/eclipse/mosquitto.git`
+
+`cd MQTT`
+
+`git clone https://github.com/eclipse/mosquitto.git`
 
 - Step 2 Installing mosquitto using cmake ( Install cmake tool if required)
 
 `sudo apt install cmake`
 
-`cd mosquitto
+`cd mosquitto`
 
-mkdir build
+`mkdir build`
 
-cd build
+`cd build`
 
-cmake -DWITH_STATIC_LIBRARIES=ON ../
+`cmake -DWITH_STATIC_LIBRARIES=ON ../`
 
-make'
+`make`
 
 Besure that 2 shared libraries are made:
 libmosquitto.so.1
@@ -59,9 +61,9 @@ libmosquittopp.so.1
 
 - Step 3 Configuring mosquitto shared library which loading when run program
 
-`sudo cp /lib/libmosquitto.so.1 /usr/local/lib/
+`sudo cp /lib/libmosquitto.so.1 /usr/local/lib/`
 
-sudo cp /lib/cpp/libmosquittopp.so.1 /usr/local/lib/`
+`sudo cp /lib/cpp/libmosquittopp.so.1 /usr/local/lib/`
 
 Then run:
 
