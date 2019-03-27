@@ -69,3 +69,24 @@ Then run:
 
 `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib`
 
+# Create example application based on example of mosquitto
+`It is a client that subscribes to the topic temperature/celsius which should have temperature data in text form being published to it. It reads this data as a Celsius temperature, converts to Farenheit and republishes on temperature/farenheit.`
+
+- Step 1 Copy lib folder after build source code
+- Step 2 run program
+Subscribe topic `temperature/farenheit` in termial
+
+`mosquitto_sub -h 192.168.1.16 -t "temperature/farenheit" -u "test" -P "test"`
+
+Run program `.\mqtt-client`
+
+Publish message in other teminal
+
+`mosquitto_pub -m "temperature/celsius" -t '30' -u test -P test`
+
+Check received message show on subscribe Termial
+
+
+
+
+
