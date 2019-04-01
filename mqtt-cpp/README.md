@@ -69,7 +69,7 @@ Then run:
 
 `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib`
 
-# Create example application based on example of mosquitto
+# Create example based on example of mosquitto
 `It is a client that subscribes to the topic temperature/celsius which should have temperature data in text form being published to it. It reads this data as a Celsius temperature, converts to Farenheit and republishes on temperature/farenheit.`
 
 - Step 1 Copy lib folder after build source code
